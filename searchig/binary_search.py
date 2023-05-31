@@ -1,7 +1,11 @@
 import random
+from typing import Optional
 
 
-def binary_search(lookup_value: int, sorted_array: list[int], start: int, end: int) -> int:
+def binary_search(lookup_value: int, sorted_array: list[int], start: int, end: int) -> Optional[int]:
+    if end <= start:
+        return None
+    
     mid_point = int((end + start) / 2)
     
     if sorted_array[mid_point] == lookup_value:
