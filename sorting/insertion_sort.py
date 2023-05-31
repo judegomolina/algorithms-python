@@ -6,9 +6,7 @@ Space complexity: O(1)
 """
 
 
-from typing import List
-
-def insertion_sort(array: List[int]) -> List[int]:
+def insertion_sort(array: list[int]) -> list[int]:
     for i in range(1, len(array)):
         key = array[i]
         j = i - 1
